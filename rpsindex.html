@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<title>RPS Project</title>
+<meta charset="UTF-8">
+
+<body>
+
+</body>
+
+<script>
+    function computerPlay() {
+        const options = ["rock", "paper", "scissors"];
+        const computerChoice = options[Math.floor(Math.random() * options.length)];
+
+        return computerChoice;
+    }
+
+    function playerSelection() {
+        let playerChoice = prompt("What would you like to play? Rock, Paper, or Scissors?");
+        return playerChoice;
+    }
+
+    function playRound(playerSelection, computerChoice) {
+        playerSelection = playerSelection.toLowerCase()
+        let result = ""
+        switch (true) {
+            // player: Rock, Computer: Rock
+            case playerSelection == 'rock' && computerChoice == 'rock':
+                result = "draw";
+                return result;
+                break;
+
+                // player: Rock, Computer: Paper
+            case playerSelection == 'rock' && computerChoice == 'paper':
+                result = "computer";
+                return result;
+                break;
+
+                // player: Rock, Computer: Scissors
+            case playerSelection == 'rock' && computerChoice == 'scissors':
+                result = "player";
+                return result;
+                break;
+
+                // player: Paper, Computer: Rock
+            case playerSelection == 'paper' && computerChoice == 'rock':
+                result = "player";
+                return result;
+                break;
+
+                // player: Paper, Computer: Paper
+            case playerSelection == 'paper' && computerChoice == 'paper':
+                result = "draw";
+                return result;
+                break;
+
+                // player: Paper, Computer: Scissors
+            case playerSelection == 'paper' && computerChoice == 'scissors':
+                result = "computer";
+                return result;
+                break;
+
+                // player: Scissors, Computer: Rock
+            case playerSelection == 'scissors' && computerChoice == 'rock':
+                result = "computer";
+                return result;
+                break;
+
+                // player: Scissors, Computer: Paper
+            case playerSelection == 'scissors' && computerChoice == 'paper':
+                result = "player";
+                return result;
+                break;
+
+                // player: Scissors, Computer: Scissors
+            case playerSelection == 'scissors' && computerChoice == 'scissors':
+                result = "draw";
+                return result;
+                break;
+
+        }
+    }
+
+    function game() {
+        let playerScore = 0;
+        let computerScore = 0;
+
+        let result = playRound(playerSelection(), computerPlay())
+        if (result == "player") {
+            playerScore++;
+        } else if (result == "computer") {
+            computerScore++;
+        }
+
+        result = playRound(playerSelection(), computerPlay())
+        if (result == "player") {
+            playerScore++;
+        } else if (result == "computer") {
+            computerScore++;
+        }
+
+        result = playRound(playerSelection(), computerPlay())
+        if (result == "player") {
+            playerScore++;
+        } else if (result == "computer") {
+            computerScore++;
+        }
+
+        result = playRound(playerSelection(), computerPlay())
+        if (result == "player") {
+            playerScore++;
+        } else if (result == "computer") {
+            computerScore++;
+        }
+
+        result = playRound(playerSelection(), computerPlay())
+        if (result == "player") {
+            playerScore++;
+        } else if (result == "computer") {
+            computerScore++;
+        }
+
+        if (playerScore > computerScore) {
+            return "Player wins!"
+        } else {
+            return "Computer wins!"
+        }
+    }
+</script>
+
+
+
+
+
+
+</html>
