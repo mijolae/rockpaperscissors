@@ -1,1 +1,1 @@
-This is the first redition of the Rock, Paper, Scissors game for The Odin Project. It currently is hardcoded in JavaScript, but in the future I hope to make it function better. This was a cool project to work on, and it was a little easy.
+This is the first rendition of the Rock, Paper, Scissors game for The Odin Project. It currently is hardcoded in JavaScript, but in the future I hope to make it function better. This was a cool project to work on, and it was a little easy.
